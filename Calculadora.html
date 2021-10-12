@@ -1,0 +1,40 @@
+<script>
+var num1,num2,operador,total;
+operador = prompt("Ingresa la operacion a realizar:");
+num1 = parseInt(prompt("Ingresa el primer numero :"));
+num2 = parseInt(prompt("Ingresa el segundo numero :"));
+
+switch(operador){
+    case "suma":
+         sumarNumeros(num1,num2);
+    break;
+    case "resta":
+         restarNumeros(num1,num2);  
+    break;     
+    case "multiplicacion":
+         multiplicarNumeros(num1,num2);
+    break;
+    case "division":
+         dividirNumeros(num1,num2);  
+    break; 
+    default:
+        alert("Escribe bien bro");
+    break;    
+}   
+function sumarNumeros(num1,num2){
+    total = num1 + num2;
+    alert("La suma es: " + total);  
+}
+function restarNumeros(num1,num2){
+    total = num1 - num2;
+    alert("La resta es: " + total);
+}
+function multiplicarNumeros(num1,num2){
+    total = num1 * num2;
+    alert("La multiplicacion es: " + total);
+}
+function dividirNumeros(num1,num2){
+    total = num1 / num2;
+    alert("La division es: " + total);
+}
+</script>
