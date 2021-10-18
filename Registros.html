@@ -1,0 +1,69 @@
+<script>
+var nombres,apellidoP,apellidoM,sexo;
+
+nombreF = ["Jazmin","Ana","Jimena","Mia","Veronica"];
+nombreM = ["Rafael","Rodrigo","Saul","Gael","Carlos"];
+apellidoP = ["Martinez","Jimenez","Hernanadez","Baltazar","Garcia","Ramos","Perez","Lopez","Sanchez","Dimas"];
+apellidoM = ["Rodriguez","Ramirez","Medina","Gomez","Flores","Islas","Guzman","Soto","Salazar","Montes"];
+carreras=["Ingenieria en Software","Ingenieria Financiera","Ingenieria Mecanica Automotriz","Ingenieria en Tecnologias de Manufactura","Licenciatura en Negocios Internacionales"];
+for (var i= 1; i<10; i++){
+    let registroM = personaM();
+    console.log("Alumno No." + i);
+    console.log(registroM);
+}
+    for (var x= 10; x<20; x++){
+    let registroF = personaF();
+    console.log("Alumno No." + x);
+    console.log(registroF);
+    }
+ function personaM(){
+     let nombreMa = nombreM[generadorAleatorio(0,nombreM.length-1)];
+     let apellidoPa = apellidoP[generadorAleatorio(0,apellidoP.length-1)];
+     let apellidoMa = apellidoM[generadorAleatorio(0,apellidoM.length-1)];
+     let edad = generadorAleatorio(18,30);
+     let carrera = carreras[generadorAleatorio(0,carreras.length-1)];
+     let matricula = generadorAleatorio(1000000000,9999999999);
+     sexo= "Hombre";
+     let personaM1 = {
+         "Nombre: " : nombreMa,
+         "Apellido Paterno: " : apellidoPa,
+         "Apellido Materno: " : apellidoMa,
+         "Edad: " : edad,
+         "Sexo: " : sexo,
+         "Escuela: ":"Universidad Politecnica de Tecamac",
+         "Carrera: " : carrera,
+         "Matricula: " : matricula
+     }
+     return personaM1;
+ }
+ function personaF(){
+     let nombreFe = nombreF[generadorAleatorio(0,nombreF.length-1)];
+     let apellidoPa = apellidoP[generadorAleatorio(0,apellidoP.length-1)];
+     let apellidoMa = apellidoM[generadorAleatorio(0,apellidoM.length-1)];
+     let edad = generadorAleatorio(18,30);
+     let carrera = carreras[generadorAleatorio(0,carreras.length-1)];
+     let matricula = generadorAleatorio(1000000000,9999999999);
+     sexo= "Mujer";
+     let personaF1 = {
+         "Nombre: " : nombreFe,
+         "Apellido Paterno: " : apellidoPa,
+         "Apellido Materno: " : apellidoMa,
+         "Edad: " : edad,
+         "Sexo: " : sexo,
+         "Escuela: ":"Universidad Politecnica de Tecamac",
+         "Carrera: " : carrera,
+         "Matricula: " : matricula
+     }
+     return personaF1;
+ }
+
+function generadorAleatorio(max,min){
+   return Math.floor(Math.random() * (max - min)) + min;
+
+}
+
+
+
+
+
+</script> 
