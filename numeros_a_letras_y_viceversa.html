@@ -1,0 +1,24 @@
+<script>
+
+var num = prompt("Ingrese numero o palabra a convertir:");
+var numer = numeroConvertir();
+console.log(numer);
+
+function numeroConvertir(){
+    let nume = [0,1,2,3,4,5,6,7,8,9];
+    let letra = ["Cero","Uno","Dos","Tres","Cuatro","Cinco","Seis","Siete","Ocho","Nueve"];     
+    let nuevoNumero = "";
+    for(i=0;i<letra.length;i++){ 
+        for(z=0;z<nume.length;z++){   
+        if (num[i] == nume[z]){
+        nuevoNumero += letra[z];
+        }
+        else if(num[i] == letra[i] ){
+        nuevoNumero = nume;
+        }
+        }   
+        }
+    return nuevoNumero;
+}
+
+</script>

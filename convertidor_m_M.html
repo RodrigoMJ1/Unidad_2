@@ -1,0 +1,21 @@
+<script>
+var frase = prompt("Ingresa la frase");
+var fraseNueva = convertidorFrase();
+console.log(fraseNueva)
+function convertidorFrase(){
+    let nuevafrase="";
+    let frasem = ["a","b","c","d","e","f","g","h","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    let fraseMa = ["A","B","C","D","E","F","G","H","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    for (i=0;i<frase.length;i++){
+        for(z=0;z<frasem.length;z++){   
+     if (frase[i] == frasem[z]){
+        nuevafrase += fraseMa[z];
+    }
+     if(frase[i]==fraseMa[z]){
+        nuevafrase += frasem[z];
+    }
+    }
+}
+return nuevafrase;
+}
+</script>
